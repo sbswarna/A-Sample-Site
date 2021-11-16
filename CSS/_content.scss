@@ -1,0 +1,63 @@
+.content {
+  @import 'mixins';
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    @include border-gradient(to right, $color2, white);
+    margin: 10px;
+    display: flex;
+    .home {
+      font-weight: 5px;
+      font-size: large;
+      flex: 2;
+      color: $color2;
+      margin-top: 10px;
+      .horizontal {
+        border-bottom: 2px solid transparent;
+        @include border-gradient(to right, $color2, white);
+        width: auto;
+        margin-right: 10px;
+        padding-bottom: 10px;
+      }
+    }
+
+    .vertical {
+      border-right: 2px solid transparent;
+      border-image: linear-gradient(to bottom, $color1, white);
+      height: auto;
+      margin-bottom: 10px;
+    }
+    article {
+      p {
+        margin-top: 30px;
+        padding-right: 20px;
+        text-align: justify;
+        text-justify: inter-word;
+        a {
+          text-decoration: none;
+          color:$color3;
+          font-weight: bold;
+        }
+        a:hover {
+          color: blue;
+        }
+      }
+    }
+    .myimage {
+      flex: 1;
+      h3 {
+        margin-bottom: 2px;
+        font-weight: 5px;
+        font-size: large;
+      }
+      p {
+        margin-top: 10px;
+        a {
+          text-decoration: none;
+        }
+      }
+      margin: 20px;
+      max-height: auto;
+      max-width: 100%;
+      overflow: hidden;
+    }
+}

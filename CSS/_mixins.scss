@@ -1,0 +1,19 @@
+@mixin border-gradient($startColor, $endColor) {
+    border-color: $startColor;
+    border-image: -webkit-gradient(to right, from($startColor), to($endColor));
+    border-image: -webkit-linear-gradient(to right, $startColor, $endColor);
+    border-image:    -moz-linear-gradient(to right, $startColor, $endColor);
+    border-image:     -ms-linear-gradient(to right, $startColor, $endColor);
+    border-image:      -o-linear-gradient(to right, $startColor, $endColor);
+    border-image:         linear-gradient(to right, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+@mixin for-size($size) {
+    @if $size == phone-only {
+      @media (max-width: 599px) { @content; }
+    } @else if $size == tablet {
+      @media (max-width: 767px) { @content; }
+    }
+}
+  

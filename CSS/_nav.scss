@@ -1,0 +1,32 @@
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: large;
+    nav {
+      display: flex;
+      margin-top: 30px;
+      justify-content: space-around;
+      ul {
+        padding: 15px;
+        display: flex;
+        margin: 0;
+      }
+      li {
+        display: block;
+        list-style: none;
+        padding-right: 10px;
+      }
+      a {
+        text-decoration: none;
+        color: $color1;
+        border: none;
+        padding: 15px;
+      }
+      .active,
+      a:hover {
+        background-color: $color1;
+        color: white;
+      }
+    }
+  }

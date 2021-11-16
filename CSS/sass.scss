@@ -1,0 +1,69 @@
+$color1: #84a9ac;
+$color2: #3b6978;
+$color3: #204051;
+$color4: #cae8d5;
+
+body {
+  background-color: $color2;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 5px;
+  margin: 10px;
+  .titles {
+    h1,
+    h2 {
+      font-weight: normal;
+      color: $color3;
+      padding-left: 10px;
+    }
+  }
+  @import 'nav';
+  @import 'content';
+}
+
+@include for-size(phone-only) {
+  .container {
+    text-align: center;
+    padding: 5px;
+  }
+
+  .container-nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 15px 0;
+  }
+  .content {
+    flex-direction: column;
+  }
+}
+
+@include for-size(tablet) {
+  .container {
+    text-align: center;
+    padding: 5px;
+  }
+
+  .container-nav {
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav li {
+    margin: 15px 0;
+  }
+  .content {
+    flex-direction: column;
+  }
+}
